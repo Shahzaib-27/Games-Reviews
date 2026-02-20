@@ -6,7 +6,8 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" 
+    className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
       />
@@ -43,13 +44,14 @@ const HeroSection = () => {
         >
           <button
             onClick={() => scrollTo("reviews")}
-            className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-all duration-300 neon-glow-cyan"
+            className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-all duration-300 neon-glow-cyan hover:scale-110"
           >
             Browse Reviews
           </button>
+          
           <button
             onClick={() => scrollTo("top-games")}
-            className="px-8 py-4 rounded-xl font-semibold border border-primary/40 text-foreground hover:bg-primary/10 transition-all duration-300"
+            className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-all duration-300 neon-glow-cyan hover:scale-110"
           >
             Top Rated Games
           </button>

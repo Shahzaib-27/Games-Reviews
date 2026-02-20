@@ -34,7 +34,9 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Search <span className="gradient-text">Games</span>
           </h2>
+
           <p className="text-muted-foreground">Find any game in our collection</p>
+        
         </motion.div>
 
         <motion.div
@@ -46,6 +48,7 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">
               <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+
               <input
                 type="text"
                 value={query}
@@ -53,9 +56,13 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
                 placeholder="Search by game name..."
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
+              
+              
+
             </div>
             <div className="relative">
               <SlidersHorizontal size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              
               
               <select
                 value={minRating}
@@ -67,12 +74,15 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
                 <option value={4.5}>4.5+ Stars</option>
                 <option value={4.7}>4.7+ Stars</option>
               </select>
+
             </div>
+            
           </div>
 
           {showResults && (
             <div className="mt-6 space-y-3">
               {results.length === 0 ? (
+                
                 <p className="text-center text-muted-foreground py-8">No games found</p>
               ) : (
                 results.map((game) => (
@@ -83,7 +93,8 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
                     onClick={() => onReadReview(game)}
                     className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
                   >
-                    <img src={game.image} alt={game.title} className="w-14 h-14 rounded-lg object-cover" />
+                    <img src={game.image} alt={game.title} className="w-40 h-90 rounded-lg object-cover" />
+
                     <div className="flex-1 min-w-0">
                       <h4 className="font-display text-sm font-semibold truncate">{game.title}</h4>
                       <span className="text-xs text-muted-foreground">{game.category}</span>

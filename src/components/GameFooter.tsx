@@ -3,10 +3,13 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div>
-          <span className="font-display text-xl font-bold gradient-text">GameVerse</span>
+          
+          <span className="font-display text-xl font-bold gradient-text">GameReview</span>
+         
           <p className="text-sm text-muted-foreground mt-3">
-            Your trusted source for honest game reviews since 2024.
+            Your trusted source for honest game reviews .
           </p>
+
         </div>
         <div>
           <h4 className="font-display text-sm font-semibold mb-3">Quick Links</h4>
@@ -24,20 +27,28 @@ const Footer = () => (
             ))}
           </div>
         </div>
+        
         <div>
           <h4 className="font-display text-sm font-semibold mb-3">Follow Us</h4>
-          <div className="flex gap-3">
+          <div 
+           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex gap-3">
             {["Twitter", "Discord", "YouTube"].map((s) => (
-              <a key={s} href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                {s}
-              </a>
+              <h1 key={s} href="#"  
+              className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                {s} 
+              </h1>
             ))}
           </div>
         </div>
       </div>
+      
       <div className="border-t border-border pt-6 text-center">
-        <p className="text-xs text-muted-foreground">© 2024 GameVerse. All rights reserved.</p>
-      </div>
+       
+        <p className="text-xs text-muted-foreground">@ GameReview. All rights reserved.</p>
+     
+     </div>
+   
     </div>
   </footer>
 );

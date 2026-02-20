@@ -23,13 +23,14 @@ const ReviewModal = ({ game, onClose }: Props) => (
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-[700px] max-h-[700px] overflow-y-hidden glass-card neon-glow-cyan p-2 m-2 "
+          className="relative w-full max-w-[800px] max-h-[700px] overflow-y-hidden 
+          glass-card hover:neon-glow-cyan p-2 m-2 transition-all duration-200 ease-in-out"
         >
 
           <div className="relative h-56 sm:h-64 w-full ">
             <img src={game.image} alt={game.title} 
-            className="w-full h-full object-contain" />
-            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+            className="w-full h-full object-contain  " />
+            <div className="absolute inset-0 bg-gradient-to-t to-transparent" />
             
             <button
               className="absolute top-4 right-4 p-2 rounded-full bg-background/50 object-contain backdrop-blur-md hover:bg-background/80 transition-colors"
@@ -42,14 +43,17 @@ const ReviewModal = ({ game, onClose }: Props) => (
 
           <div className="p-6">
             <div className="flex items-start justify-between mb-4">
+
               <div>
                 <h2 className="font-display text-2xl font-bold">{game.title}</h2>
                 <span className="text-sm text-primary">{game.category}</span>
               </div>
+
               <div className="flex items-center gap-1 bg-primary/10 px-3 py-1.5 rounded-full">
                 <Star size={16} className="fill-star text-star" />
                 <span className="font-display font-bold text-star">{game.rating}</span>
               </div>
+
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-6">{game.fullReview}</p>
@@ -57,6 +61,7 @@ const ReviewModal = ({ game, onClose }: Props) => (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
                 <div className="flex items-center gap-2 mb-3">
+                 
                   <ThumbsUp size={16} className="text-emerald-400" />
                   
                   <span className="font-display text-sm font-semibold text-emerald-400">
@@ -64,22 +69,30 @@ const ReviewModal = ({ game, onClose }: Props) => (
                   </span>
                 
                 </div>
+               
                 <ul className="space-y-1.5">
                   {game.pros.map((p) => (
                     <li key={p} className="text-sm text-muted-foreground">+ {p}</li>
                   ))}
                 </ul>
+
               </div>
+             
               <div className="p-4 rounded-lg bg-red-500/5 border border-red-500/20">
                 <div className="flex items-center gap-2 mb-3">
+                 
                   <ThumbsDown size={16} className="text-red-400" />
+                  
                   <span className="font-display text-sm font-semibold text-red-400">Cons</span>
+               
                 </div>
+                
                 <ul className="space-y-1.5">
                   {game.cons.map((c) => (
                     <li key={c} className="text-sm text-muted-foreground">- {c}</li>
                   ))}
                 </ul>
+
               </div>
             </div>
             
