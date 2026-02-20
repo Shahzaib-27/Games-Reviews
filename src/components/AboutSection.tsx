@@ -10,10 +10,10 @@ const AboutSection = () => (
         className="glass-card p-8 md:p-12 text-center"
       >
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-          About <span className="gradient-text">GameVerse</span>
+          About <span className="gradient-text">GameReview</span>
         </h2>
         <p className="text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
-          GameVerse is your trusted destination for honest, unbiased game reviews. Founded by passionate gamers, we believe every player deserves transparent insights before investing their time and money. No sponsored scores — just genuine opinions from people who love games.
+          GameReview is your trusted destination for honest, unbiased game reviews. Founded by passionate gamers, we believe every player deserves transparent insights before investing their time and money. No sponsored scores — just genuine opinions from people who love games.
         </p>
         <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
           Our mission: to build the most trusted gaming community where reviews are written by gamers, for gamers.

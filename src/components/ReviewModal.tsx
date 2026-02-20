@@ -3,7 +3,7 @@ import { X, Star, ThumbsUp, ThumbsDown } from "lucide-react";
 import { Game } from "@/data/gamesData";
 
 interface Props {
-  game: Game | null;
+  game : Game | null;
   onClose: () => void;
 }
 
@@ -17,23 +17,27 @@ const ReviewModal = ({ game, onClose }: Props) => (
         className="fixed inset-0 z-50 flex items-center justify-center p-4"
         onClick={onClose}
       >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm " />
+        <div className="absolute inset-0 bg-background/70 backdrop-blur-sm " />
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-[700px] max-h-[1200px] overflow-y-auto glass-card neon-glow-cyan"
+          className="relative w-full max-w-[700px] max-h-[700px] overflow-y-hidden glass-card neon-glow-cyan p-2 m-2 "
         >
-          <div className="relative h-56 sm:h-64 w">
-            <img src={game.image} alt={game.title} className="w-full h-full object-contain" />
+
+          <div className="relative h-56 sm:h-64 w-full ">
+            <img src={game.image} alt={game.title} 
+            className="w-full h-full object-contain" />
             <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+            
             <button
+              className="absolute top-4 right-4 p-2 rounded-full bg-background/50 object-contain backdrop-blur-md hover:bg-background/80 transition-colors"
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 rounded-full bg-background/50 backdrop-blur-md hover:bg-background/80 transition-colors"
-            >
-              <X size={20} />
+              >
+              <X size={40} className="bg-sky-600 text-white rounded-lg p-2" />
             </button>
+
           </div>
 
           <div className="p-6">
@@ -54,7 +58,11 @@ const ReviewModal = ({ game, onClose }: Props) => (
               <div className="p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
                 <div className="flex items-center gap-2 mb-3">
                   <ThumbsUp size={16} className="text-emerald-400" />
-                  <span className="font-display text-sm font-semibold text-emerald-400">Pros</span>
+                  
+                  <span className="font-display text-sm font-semibold text-emerald-400">
+                    Pros
+                  </span>
+                
                 </div>
                 <ul className="space-y-1.5">
                   {game.pros.map((p) => (
@@ -74,6 +82,7 @@ const ReviewModal = ({ game, onClose }: Props) => (
                 </ul>
               </div>
             </div>
+            
           </div>
         </motion.div>
       </motion.div>
