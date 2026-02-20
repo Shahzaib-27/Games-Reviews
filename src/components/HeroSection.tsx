@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
@@ -10,7 +9,6 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent/10" />
@@ -58,15 +56,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/40 flex justify-center pt-2">
-          <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />
-        </div>
-      </motion.div>
     </section>
   );
 };

@@ -56,6 +56,7 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
             </div>
             <div className="relative">
               <SlidersHorizontal size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              
               <select
                 value={minRating}
                 onChange={(e) => setMinRating(Number(e.target.value))}

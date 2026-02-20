@@ -17,16 +17,16 @@ const ReviewModal = ({ game, onClose }: Props) => (
         className="fixed inset-0 z-50 flex items-center justify-center p-4"
         onClick={onClose}
       >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm " />
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto glass-card neon-glow-cyan"
+          className="relative w-full max-w-[700px] max-h-[1200px] overflow-y-auto glass-card neon-glow-cyan"
         >
-          <div className="relative h-56 sm:h-64">
-            <img src={game.image} alt={game.title} className="w-full h-full object-cover" />
+          <div className="relative h-56 sm:h-64 w">
+            <img src={game.image} alt={game.title} className="w-full h-full object-contain" />
             <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
             <button
               onClick={onClose}

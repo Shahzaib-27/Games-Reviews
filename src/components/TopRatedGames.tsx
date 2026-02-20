@@ -27,12 +27,15 @@ const TopRatedGames = ({ games }: { games: Game[] }) => {
             <p className="text-muted-foreground">The highest rated games on GameVerse</p>
           </div>
           <div className="hidden sm:flex gap-2">
+            
             <button onClick={() => scroll("left")} className="p-2 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all">
-              <ChevronLeft size={20} />
-            </button>
+              <ChevronLeft size={20} /> 
+              </button>
+            
             <button onClick={() => scroll("right")} className="p-2 rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all">
               <ChevronRight size={20} />
             </button>
+            
           </div>
         </motion.div>
 
