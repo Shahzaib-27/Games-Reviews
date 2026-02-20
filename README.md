@@ -24,6 +24,4 @@ A modern and responsive game review website built with **React**, **TypeScript**
 - Lucide Icons
 - Vite (or Next.js)
 
----
 
-## 📁 Project Structure
