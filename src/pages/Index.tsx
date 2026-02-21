@@ -13,7 +13,7 @@ import GameFooter from "@/components/GameFooter";
 
 
 const Index = () => {
-  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+  const [selectedGame, setSelectedGame] = useState < Game | null > ( null );
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -26,6 +26,7 @@ const Index = () => {
       <ContactSection />
       <GameFooter />
       <ReviewModal game={selectedGame} onClose={() => setSelectedGame(null)} />
+
     </div>
   );
 };

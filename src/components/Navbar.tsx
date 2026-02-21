@@ -2,13 +2,21 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [ "Home", 
-                   "Reviews", 
-                   "Top Games", 
-                   "About", 
-                   "Contact"
-                  
-                  ];
+import { Link } from "react-router-dom";
+
+type NavLinkItem = {
+  id: number;
+  label: string;
+  path: string;
+};
+
+const navLinks: NavLinkItem[] = [
+      { id:1 , label: "Home",      path: "/"              },
+      { id:2 , label: "Reviews",   path: "/morereviews"   },
+      { id:3 , label: "Top Games", path: "/topgamespage"  },
+      { id:4 , label: "About",     path: "/aboutpage"     },
+      { id:5 , label: "Contact",   path: "/contactPage"   },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +28,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id.toLowerCase().replace(" ", "-"));
-    el?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
+
 
   return (
     <nav
@@ -44,13 +48,14 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             
             {navLinks.map((link) => (
-              <button
-                key={link}
-                onClick={() => scrollTo(link)}
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
               >
-               <h3> {link}</h3>
-              </button>
+               <h3>{link.label}</h3>
+              </Link>
             ))}
 
           </div>

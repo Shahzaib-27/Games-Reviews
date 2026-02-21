@@ -1,3 +1,27 @@
+import { Link } from "react-router-dom";
+
+type NavLinkItem = {
+  id: number;
+  label: string;
+  path: string;
+};
+
+const QuickLinks: NavLinkItem[] = [
+      { id:1 , label: "Home",      path: "/"              },
+      { id:2 , label: "Reviews",   path: "/morereviews"   },
+      { id:3 , label: "Top Games", path: "/topgamespage"  },
+      { id:4 , label: "About",     path: "/aboutpage"     },
+      { id:5 , label: "Contact",   path: "/contactPage"   },
+];
+
+
+const FollowLinks = [
+  { label: "Twitter", path: " " },
+  { label: "Discord", path: "  " },
+  { label: "YouTube", path: " " },
+];
+
+
 const Footer = () => (
   <footer className="border-t border-border py-12 px-4">
     <div className="max-w-7xl mx-auto">
@@ -11,20 +35,20 @@ const Footer = () => (
           </p>
 
         </div>
+
         <div>
           <h4 className="font-display text-sm font-semibold mb-3">Quick Links</h4>
-          <div className="space-y-2">
-            {["Home", "Reviews", "Top Games", "Categories", "About", "Contact"].map((link) => (
-              <button
-                key={link}
-                onClick={() =>
-                  document.getElementById(link.toLowerCase().replace(" ", "-"))?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="block text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                {link}
-              </button>
-            ))}
+          <div className="space-y-2">            
+            {QuickLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="block text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
           </div>
         </div>
         
@@ -32,11 +56,11 @@ const Footer = () => (
           <h4 className="font-display text-sm font-semibold mb-3">Follow Us</h4>
           <div 
            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex gap-3">
-            {["Twitter", "Discord", "YouTube"].map((s) => (
-              <h1 key={s} href="#"  
-              className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                {s} 
+           className="flex gap-3">
+            {FollowLinks.map((s) => (
+              <h1 key={s.path}  
+              className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                {s.label} 
               </h1>
             ))}
           </div>
