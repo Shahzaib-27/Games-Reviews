@@ -2,23 +2,26 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 type NavLinkItem = {
   id: number;
   label: string;
-  path: string;
+  path: string
 };
 
+
 const navLinks: NavLinkItem[] = [
-      { id:1 , label: "Home",      path: "/"              },
-      { id:2 , label: "Reviews",   path: "/morereviews"   },
-      { id:3 , label: "Top Games", path: "/topgamespage"  },
-      { id:4 , label: "About",     path: "/aboutpage"     },
-      { id:5 , label: "Contact",   path: "/contactPage"   },
+  { id:1 , label: "Home",      path: "/"              },
+  { id:2 , label: "Reviews",   path: "/morereviews"   },
+  { id:3 , label: "Top Games", path: "/topgamespage"  },
+  { id:4 , label: "About",     path: "/aboutpage"     },
+  { id:5 , label: "Contact",   path: "/contactPage"   },
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -42,7 +45,11 @@ const Navbar = () => {
             className="font-display text-xl md:text-2xl font-bold gradient-text cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
+            <button className="outline-none " 
+            onClick={()=> navigate("/")}>
             GameReviews
+            </button>
+            
           </motion.span>
 
           <div className="hidden md:flex items-center gap-8">

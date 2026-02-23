@@ -53,8 +53,8 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search by game name..."
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
+                placeholder="Search by game name.."
+                className="w-full pl-10 pr-4 py-3 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors placeholder:text-white placeholder:text-center" 
               />
               
               
@@ -67,7 +67,7 @@ const SearchFilter = ({ games, onReadReview }: Props) => {
               <select
                 value={minRating}
                 onChange={(e) => setMinRating(Number(e.target.value))}
-                className="pl-10 pr-8 py-3 rounded-lg bg-muted border border-border text-foreground focus:outline-none focus:border-primary/50 transition-colors appearance-none cursor-pointer"
+                className="pl-10 pr-8 py-3 rounded-lg bg-muted border border-border text-foreground focus:outline-none focus:border-primary/50 transition-colors appearance-none cursor-pointer flex text-center w-full "
               >
                 <option value={0}>All Ratings</option>
                 <option value={4}>4+ Stars</option>

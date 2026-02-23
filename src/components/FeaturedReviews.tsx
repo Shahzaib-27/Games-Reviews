@@ -52,7 +52,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
         
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mr-10 ml-10">
           {visibleGames.map((game, i) => (
             <motion.div
               key={game.id}
@@ -63,7 +63,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
               className="glass-card h-full overflow-hidden group hover:shadow-[0px_0px_30px] hover:shadow-cyan-500 cursor-pointer transition-all duration-200 ease-in-out"
               onClick={() => onReadReview(game)}>
 
-              <div className="relative h-90 overflow-hidden">
+              <div className="relative h-50 overflow-hidden ">
                 <img
                   src={game.image}
                   alt={game.title}

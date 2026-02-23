@@ -23,7 +23,7 @@ const ReviewModal = ({ game, onClose }: Props) => (
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.9, y: 20 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-[800px] max-h-[700px] overflow-y-hidden 
+          className="relative w-full h-full max-w-[800px] max-h-[900px] overflow-y-auto 
           glass-card hover:neon-glow-cyan p-2 m-2 transition-all duration-200 ease-in-out"
         >
 

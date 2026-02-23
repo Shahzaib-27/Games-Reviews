@@ -19,10 +19,10 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroSection />
+      <AboutSection />
+      <SearchFilter games={gamesData} onReadReview={setSelectedGame} />
       <FeaturedReviews games={gamesData} onReadReview={setSelectedGame} />
       <TopRatedGames games={gamesData} />
-      <SearchFilter games={gamesData} onReadReview={setSelectedGame} />
-      <AboutSection />
       <ContactSection />
       <GameFooter />
       <ReviewModal game={selectedGame} onClose={() => setSelectedGame(null)} />

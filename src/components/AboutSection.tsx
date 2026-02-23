@@ -1,7 +1,23 @@
+
 import { motion } from "framer-motion";
 
+type Decalred = {
+      id:number;
+      label:string;
+      href:string;
+};
+
+const FollowLinks:Decalred[] = [
+      { id:1, label: "Instragram", href: "https://www.instagram.com/" },
+      { id:2, label: "YouTube",    href: "https://www.youtube.com/" },
+      { id:3, label: "Discord",    href:"https://discord.com/" },
+      { id:4, label: "Twitter",    href:"https://x.com/" },
+];
+
 const AboutSection = () => (
-  <section id="about" className="py-20 px-4">
+
+
+<section  className="py-20 px-4">
     <div className="max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -21,14 +37,16 @@ const AboutSection = () => (
           Our mission: to build the most trusted gaming community where reviews are written by gamers, for gamers.
         </p>
 
-        <div className="flex justify-center gap-4">
-          {["Twitter", "Discord", "YouTube", "Twitch"].map((social) => (
+        <div className="flex justify-center gap-3  lg:flex-row sm:flex-col w-full">
+          {FollowLinks.map((social,index) => (
             <a
-              key={social}
-              href="#"
-              className="px-4 py-2 rounded-lg border border-border text-sm text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200"
+              key={index}
+              target="_blank"
+              href={social.href}
+              className="p-2 rounded-lg border border-border text-sm sm:text-[20px] text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200 flex-col flex
+              "
             >
-              {social}
+              <h5 className="text-sm lg:text-[20px] lg:p-1 ">{social.label}</h5>
             </a>
           ))}
         </div>

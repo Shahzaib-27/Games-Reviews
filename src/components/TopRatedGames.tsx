@@ -18,7 +18,8 @@ const TopRatedGames = ({ games }: { games: Game[] }) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex items-end justify-between mb-10">
+          className="flex items-end justify-between mb-10"
+          >
             
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-2">
@@ -29,13 +30,14 @@ const TopRatedGames = ({ games }: { games: Game[] }) => {
 
           <div className="hidden sm:flex gap-2">  
             <button onClick={() => scroll("left")} 
-            className="p-2 rounded-lg border border-border hover:border-white hover:bg-sky/5 transition-all duration-200 ease-in-out bg-sky-600">
-              <ChevronLeft size={25} className="" /> 
+            className="p-2 rounded-lg border border-border hover:border-white hover:bg-sky/5 transition-all duration-200 ease-in-out bg-sky-600  ">
+              <ChevronLeft size={25} />
               </button>
             
             <button 
             onClick={() => scroll("right")} 
-            className="p-2 rounded-lg border border-border hover:border-white hover:bg-sky/5 transition-all duration-200 ease-in-out bg-sky-600">
+            className="p-2 rounded-lg border border-border hover:border-white hover:bg-sky/5 transition-all duration-200 ease-in-out bg-sky-600
+            ">
               <ChevronRight size={25} />
             </button>
           </div>
