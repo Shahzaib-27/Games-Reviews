@@ -104,7 +104,7 @@ export const gamesData: Game[] = [
   fullReview: "Marvel's Avengers delivers cinematic superhero action with iconic characters like Iron Man, Thor, Hulk, and Captain America. While fun in co-op, repetitive missions hold it back.",
   pros: ["Fun superhero combat", "Great character performances"],
   cons: ["Repetitive missions", "Heavy grind elements"],
-  featured: false
+  featured: true
 },
 
 {
@@ -163,7 +163,7 @@ export const gamesData: Game[] = [
   fullReview: "Elden Ring blends challenging Souls-style combat with a massive open world filled with secrets. Exploration feels rewarding, bosses are unforgettable, and build variety is nearly endless. A true modern RPG masterpiece.",
   pros: ["Deep combat system", "Massive open world", "Incredible boss fights"],
   cons: ["Very difficult for beginners"],
-  featured: false
+  featured: true
 },
 
 {
@@ -190,7 +190,7 @@ export const gamesData: Game[] = [
   fullReview: "GTA V offers one of the most detailed open worlds ever created. With three playable characters and endless online content, it remains one of the most successful games of all time.",
   pros: ["Huge open world", "Multiple protagonists", "Massive online mode"],
   cons: ["Online grind can be heavy"],
-  featured: false
+  featured: true
   
 },
 
@@ -204,7 +204,7 @@ export const gamesData: Game[] = [
   fullReview: "Forza Horizon 5 delivers stunning visuals, smooth racing mechanics, and an enormous car roster. The dynamic seasons and events keep gameplay fresh and exciting.",
   pros: ["Beautiful graphics", "Huge car collection", "Smooth driving mechanics"],
   cons: ["Similar to previous entries"],
-   featured: false
+   featured: true
 
 },
 
@@ -218,18 +218,9 @@ export const gamesData: Game[] = [
   fullReview: "Minecraft allows players to build, explore, and survive in a procedurally generated block world. Its creative freedom and massive modding community make it one of the most influential games ever made.",
   pros: ["Unlimited creativity", "Huge mod community", "Multiplayer fun"],
   cons: ["Graphics are simple"],
-   featured: false
+   featured: true
 
 }
 
 
 ];
-
-// export const categories = [
-//   { name: "Action", icon: "⚔️", color: "from-red-500 to-orange-500" },
-//   { name: "RPG", icon: "🛡️", color: "from-purple-500 to-indigo-500" },
-//   { name: "Adventure", icon: "🗺️", color: "from-emerald-500 to-teal-500" },
-//   { name: "Sports", icon: "🏎️", color: "from-blue-500 to-cyan-500" },
-//   { name: "Multiplayer", icon: "🌐", color: "from-pink-500 to-rose-500" },
-  
-// ];
