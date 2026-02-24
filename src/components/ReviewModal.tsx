@@ -38,7 +38,6 @@ const ReviewModal = ({ game, onClose }: Props) => (
               >
               <X size={40} className="bg-sky-600 text-white rounded-lg p-2" />
             </button>
-
           </div>
 
           <div className="p-6">

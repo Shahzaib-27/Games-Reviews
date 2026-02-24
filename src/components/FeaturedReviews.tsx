@@ -8,6 +8,8 @@ interface Props {
   onReadReview: (game: Game) => void;
 }
 
+
+
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex items-center gap-1">
     {[1, 2, 3, 4, 5].map((star) => (
@@ -25,9 +27,9 @@ const StarRating = ({ rating }: { rating: number }) => (
   </div>
 );
 
-const FeaturedReviews = ({ games, onReadReview }: Props) => {
+const FeaturedReviews = ({ games, onReadReview } : Props) => {
   
-  const  featuredGames = games.filter(game => game.featured);
+  const  featuredGames = games?.filter(game => game.featured);
   const [ visibleCount, setVisibleCount] = useState(4);
   const  visibleGames = featuredGames.slice(0, visibleCount);
 
@@ -87,11 +89,11 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
                 </p>
                 
                 <button 
-                 onClick={(e) => {
-                  e.stopPropagation();     
-                  onReadReview(game);      
-                }}
-                className="mt-3 text-sm font-semibold text-primary hover:text-sky-500">
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onReadReview(game);
+                  }}  
+                 className="mt-3 text-sm font-semibold text-primary hover:text-sky-500">
                   Read Review →
                 </button>
               

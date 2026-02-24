@@ -11,7 +11,7 @@ type NavLinkItem = {
 
 const navLinks: NavLinkItem[] = [
   { id: 1, label: "Home", path: "/" },
-  { id: 2, label: "Reviews", path: "/morereviews" },
+  { id: 2, label: "Reviews", path: "/morereviews", },
   { id: 3, label: "Top Games", path: "/topgamespage" },
   { id: 4, label: "About", path: "/aboutpage" },
   { id: 5, label: "Contact", path: "/contactPage" },

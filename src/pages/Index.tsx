@@ -26,7 +26,6 @@ const Index = () => {
       <ContactSection />
       <GameFooter />
       <ReviewModal game={selectedGame} onClose={() => setSelectedGame(null)} />
-
     </div>
   );
 };
