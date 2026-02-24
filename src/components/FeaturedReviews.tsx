@@ -51,7 +51,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
         
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 m-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 ">
 
           {visibleGames.map((game, i) => (
             <motion.div
@@ -67,7 +67,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
                 <img
                   src={game.image}
                   alt={game.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"/>
 
                 <span className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-black text-primary border border-primary/30">
                   {game.category}
@@ -75,7 +75,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
 
               </div>
 
-              <div className="p-4 m-2 mt-10 ">
+              <div className="p-2 m-2 mt-10 ">
                 <h3 className="font-display text-lg font-semibold mb-2 ">
                      {game.title}
                 </h3>
@@ -88,8 +88,8 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
                 
                 <button 
                  onClick={(e) => {
-                  e.stopPropagation();      // prevent card click from triggering twice
-                  onReadReview(game);       // open modal
+                  e.stopPropagation();     
+                  onReadReview(game);      
                 }}
                 className="mt-3 text-sm font-semibold text-primary hover:text-sky-500">
                   Read Review →
@@ -107,8 +107,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
             <button
               onClick={() => setVisibleCount(prev => prev + 4)}
               
-              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition">
-                
+              className="px-3 py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-150 ease-in-out">
               Show More
             </button>
           </div>
