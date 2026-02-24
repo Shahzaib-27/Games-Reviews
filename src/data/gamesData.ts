@@ -219,7 +219,6 @@ export const gamesData: Game[] = [
   pros: ["Unlimited creativity", "Huge mod community", "Multiplayer fun"],
   cons: ["Graphics are simple"],
    featured: true
-
 }
 
 

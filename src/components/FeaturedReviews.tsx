@@ -36,7 +36,6 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
       <div className="max-w-7xl mx-auto">
         
         <motion.div
-        
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -52,7 +51,8 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
         
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mr-10 ml-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 m-10">
+
           {visibleGames.map((game, i) => (
             <motion.div
               key={game.id}
@@ -76,9 +76,8 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
               </div>
 
               <div className="p-4 m-2 mt-10 ">
-              
                 <h3 className="font-display text-lg font-semibold mb-2 ">
-                  {game.title}
+                     {game.title}
                 </h3>
 
                 <StarRating rating={game.rating} />
@@ -87,7 +86,12 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
                   {game.shortDesc}
                 </p>
                 
-                <button className="mt-3 text-sm font-semibold text-primary hover:text-sky-500">
+                <button 
+                 onClick={(e) => {
+                  e.stopPropagation();      // prevent card click from triggering twice
+                  onReadReview(game);       // open modal
+                }}
+                className="mt-3 text-sm font-semibold text-primary hover:text-sky-500">
                   Read Review →
                 </button>
               
@@ -102,6 +106,7 @@ const FeaturedReviews = ({ games, onReadReview }: Props) => {
 
             <button
               onClick={() => setVisibleCount(prev => prev + 4)}
+              
               className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition">
                 
               Show More
