@@ -11,14 +11,14 @@ import game5 from "@/assets/AssassinsCreedValhalla.jpg";
 
 import game6 from "@/assets/Avengers_2020_cover_art.jpg";
 
-import game7 from "@/assets/EA_FC24_Cover.jpg";
+import game7 from "@/assets/EA_FC24_Cover.png";
 
 import game8 from "@/assets/Battlefield_1_cover_art.jpg";
 import game9 from "@/assets/Witcher-3.jpg";
 import game10 from "@/assets/elden_ring_cover.jpg";
 import game11 from "@/assets/cyberpunk_2077_cover.jpg";
 import game12 from "@/assets/gta_v_cover.jpg";
-import game13 from "@/assets/forza_horizon_5_cover.jpg";
+import game13 from "@/assets/forza_horizon_4_cover.jpg";
 import game14 from "@/assets/minecraft_cover.jpg";
 import game15 from "@/assets/Spider-Man_PS4_cover.jpg";
 
@@ -225,16 +225,15 @@ export const gamesData: Game[] = [
 //  title: "Forza Horizon 5",
 {
   id: 13,
-  title: "Forza Horizon 5",
+  title: "Forza Horizon 4",
   image: game13,
-  rating: 3.5,
+  rating: 4.0,
   category: "Sports",
   shortDesc: "An open-world racing experience set in vibrant Mexico.",
-  fullReview: "Forza Horizon 5 delivers stunning visuals, smooth racing mechanics, and an enormous car roster. The dynamic seasons and events keep gameplay fresh and exciting.",
+  fullReview: "Forza Horizon 4 delivers stunning visuals, smooth racing mechanics, and an enormous car roster. The dynamic seasons and events keep gameplay fresh and exciting.",
   pros: ["Beautiful graphics", "Huge car collection", "Smooth driving mechanics"],
   cons: ["Similar to previous entries"],
-   featured: true
-
+  featured: true
 },
 
 // itle: "Minecraft",
@@ -295,7 +294,7 @@ export const gamesData: Game[] = [
   id: 18,
   title: "The Last of Us Part II",
   image: game18,
-  rating: 4.8,
+  rating: 5,
   category: "Action",
   shortDesc: "An emotional journey of survival and revenge.",
   fullReview: "The Last of Us Part II delivers a powerful and emotional narrative with intense survival gameplay. Its cinematic presentation, detailed environments, and character development set a new benchmark for storytelling in games.",

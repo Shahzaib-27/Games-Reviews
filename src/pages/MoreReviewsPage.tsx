@@ -10,7 +10,7 @@ import Navbar from "@/components/Navbar";
 import GameFooter from "@/components/GameFooter";
 
 const MoreReviews = () => {
-  const [selectedGame, setSelectedGame] = useState < Game | null>(null);
+  const [selectedGame, setSelectedGame] = useState < Game | null > (null) ;
 
   return (
     <>
@@ -18,10 +18,7 @@ const MoreReviews = () => {
 
         <div className="min-h-screen text-foreground px-12 py-12 bg-gradient-to-b from-background/70 via-background/50 to-background bg-blue-950">
 
-        <div 
-        //  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} 
-         >
-          
+        <div>
            <FeaturedReviews games={gamesData} onReadReview={setSelectedGame} />
            <ReviewModal game={selectedGame} onClose={() => setSelectedGame(null)} />
         </div>

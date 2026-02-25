@@ -9,7 +9,7 @@ interface Props {
 }
 
 
-const StarRating = ({ rating }: { rating: number }) => (
+const StarRating = ({ rating } : { rating: number }) => (
   <div className="flex items-center gap-1">
     {[1, 2, 3, 4, 5].map((star) => (
       <Star
@@ -29,7 +29,7 @@ const StarRating = ({ rating }: { rating: number }) => (
 const FeaturedReviews = ({ games, onReadReview } : Props) => {
   
   const  featuredGames = games?.filter(game => game.featured);
-  const [ visibleCount, setVisibleCount] = useState(4);
+  const [ visibleCount, setVisibleCount] = useState(8);
   const  visibleGames = featuredGames.slice(0, visibleCount);
 
   return (
@@ -57,10 +57,10 @@ const FeaturedReviews = ({ games, onReadReview } : Props) => {
           {visibleGames.map((game, i) => (
             <motion.div
               key={game.id}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.01 }}
+              transition={{ delay: i * 0.1 }}
               className="glass-card h-full overflow-hidden group hover:shadow-[0px_0px_30px] hover:shadow-cyan-500 cursor-pointer transition-all duration-200 ease-in-out m-2 "
               onClick={() => onReadReview(game)}>
 
@@ -68,7 +68,7 @@ const FeaturedReviews = ({ games, onReadReview } : Props) => {
                 <img
                   src={game.image}
                   alt={game.title}
-                  className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"/>
+                  className="w-full h-full object-cover transition-transform duration-210 group-hover:scale-105"/>
 
                 <span className="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-black text-primary border border-primary/30">
                   {game.category}
@@ -108,7 +108,7 @@ const FeaturedReviews = ({ games, onReadReview } : Props) => {
             <button
               onClick={() => setVisibleCount(prev => prev + 4)}
               
-              className="px-3 py-3 bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-150 ease-in-out">
+              className="px-2 py-2 bg-primary text-white rounded-lg hover:bg-primary/80 transition-all duration-200 ease-in-out">
               Show More
             </button>
           </div>
