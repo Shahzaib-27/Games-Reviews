@@ -47,7 +47,7 @@ const Footer = () => (
                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="block text-sm text-muted-foreground hover:text-primary transition-colors "
             >
-              {link.label}
+              <h1>{link.label}</h1>
             </Link>
           ))}
           </div>
@@ -57,18 +57,18 @@ const Footer = () => (
           <h4 className="font-display text-sm font-semibold mb-3">Follow Us</h4>
           <div 
            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-           className="flex gap-3">
+           className="flex flex-col gap-2 ">
             {FollowLinks.map((links,index) => (
-              <button
-               key={index}
-               className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">     
-               <a
+              <h1
+              key={index}
+              className="block text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer ">     
+              <a
                   href={links.href}
                   target="_blank"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer ">
                   {links.label}                 
                 </a>
-              </button>
+              </h1>
             ))}
           </div>
         </div>

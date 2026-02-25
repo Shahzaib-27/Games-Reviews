@@ -62,7 +62,7 @@ const FeaturedReviews = ({ games, onReadReview } : Props) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card h-full overflow-hidden group hover:shadow-[0px_0px_30px] hover:shadow-cyan-500 cursor-pointer transition-all duration-200 ease-in-out"
+              className="glass-card h-full overflow-hidden group hover:shadow-[0px_0px_30px] hover:shadow-cyan-500 cursor-pointer transition-all duration-200 ease-in-out m-2 "
               onClick={() => onReadReview(game)}>
 
               <div className="relative h-50 overflow-hidden ">

@@ -46,7 +46,7 @@ const HeroSection = () => {
             onClick={() => navigate("/morereviews")}
             className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-accent text-primary-foreground hover:opacity-90 transition-all duration-300 neon-glow-cyan hover:scale-110 ml-5 mr-5 "
           >
-            Browse Reviews
+            More Reviews
           </button>
           
           <button

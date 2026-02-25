@@ -10,7 +10,10 @@ const ContactPage = () => {
     <>  
     <Navbar/>
     <div className="min-h-screen text-foreground bg-gradient-to-b from-background/70 via-background/50 to-background bg-blue-950 mt-5 p-2 ">
-    <ContactSection/>
+        <div 
+        onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} >
+        <ContactSection/>
+        </div>
     </div>
     <GameFooter/>
     </>

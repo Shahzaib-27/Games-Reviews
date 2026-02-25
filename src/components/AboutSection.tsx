@@ -37,16 +37,14 @@ const AboutSection = () => (
           Our mission: to build the most trusted gaming community where reviews are written by gamers, for gamers.
         </p>
 
-        <div className="flex justify-center gap-3  lg:flex-row sm:flex-col w-full">
+        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row w-full justify-center gap-2 ">
           {FollowLinks.map((social,index) => (
             <a
               key={index}
               target="_blank"
               href={social.href}
-              className="p-2 rounded-lg border border-border text-sm sm:text-[20px] text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200 flex-col flex
-              "
-            >
-              <h5 className="text-sm lg:text-[20px] lg:p-1 ">{social.label}</h5>
+              className="p-2 rounded-lg border border-border text-sm sm:text-[20px] text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-200 flex flex-col">
+              <h5 className="text-sm lg:text-[20px] p-1">{social.label}</h5>
             </a>
           ))}
         </div>
