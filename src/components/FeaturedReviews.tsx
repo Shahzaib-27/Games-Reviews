@@ -9,7 +9,6 @@ interface Props {
 }
 
 
-
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex items-center gap-1">
     {[1, 2, 3, 4, 5].map((star) => (
@@ -58,10 +57,10 @@ const FeaturedReviews = ({ games, onReadReview } : Props) => {
           {visibleGames.map((game, i) => (
             <motion.div
               key={game.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.01 }}
               className="glass-card h-full overflow-hidden group hover:shadow-[0px_0px_30px] hover:shadow-cyan-500 cursor-pointer transition-all duration-200 ease-in-out m-2 "
               onClick={() => onReadReview(game)}>
 

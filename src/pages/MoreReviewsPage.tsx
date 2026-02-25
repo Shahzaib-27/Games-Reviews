@@ -19,7 +19,8 @@ const MoreReviews = () => {
         <div className="min-h-screen text-foreground px-12 py-12 bg-gradient-to-b from-background/70 via-background/50 to-background bg-blue-950">
 
         <div 
-         onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} >
+        //  onClick={() => {window.scrollTo({ top: 0, behavior: "smooth" })}} 
+         >
           
            <FeaturedReviews games={gamesData} onReadReview={setSelectedGame} />
            <ReviewModal game={selectedGame} onClose={() => setSelectedGame(null)} />

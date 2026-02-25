@@ -4,9 +4,15 @@ import game1 from "@/assets/God_of_War_Ragnarök_cover.jpg";
 import game2 from "@/assets/Red_Dead_Redemption_II.jpg";
 import game3 from "@/assets/Battlefield_2042_cover_art.jpg";
 import game4 from "@/assets/Call_of_Duty_Modern_Warfare_(2019)_cover.jpg";
-import game5 from "@/assets/Spider-Man_PS4_cover.jpg";
+import game5 from "@/assets/AssassinsCreedValhalla.jpg";
+
+
+
+
 import game6 from "@/assets/Avengers_2020_cover_art.jpg";
+
 import game7 from "@/assets/EA_FC24_Cover.jpg";
+
 import game8 from "@/assets/Battlefield_1_cover_art.jpg";
 import game9 from "@/assets/Witcher-3.jpg";
 import game10 from "@/assets/elden_ring_cover.jpg";
@@ -14,6 +20,14 @@ import game11 from "@/assets/cyberpunk_2077_cover.jpg";
 import game12 from "@/assets/gta_v_cover.jpg";
 import game13 from "@/assets/forza_horizon_5_cover.jpg";
 import game14 from "@/assets/minecraft_cover.jpg";
+import game15 from "@/assets/Spider-Man_PS4_cover.jpg";
+
+
+import game16 from "@/assets/Destiny.jpg";
+import game17 from "@/assets/Halo.jpg";
+import game18 from "@/assets/TheLastOfUsPartII.jpg"
+
+
 
 export interface Game {
   id: number;
@@ -29,6 +43,7 @@ export interface Game {
 }
 
 export const gamesData: Game[] = [
+  // title: "God of War Ragnarök",
 {
   id: 1,
   title: "God of War Ragnarök",
@@ -42,6 +57,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Red Dead Redemption II",
 {
   id: 2,
   title: "Red Dead Redemption II",
@@ -55,6 +71,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Battlefield 2042",
 {
   id: 3,
   title: "Battlefield 2042",
@@ -68,6 +85,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Call of Duty: Modern Warfare (2019)",
 {
   id: 4,
   title: "Call of Duty: Modern Warfare (2019)",
@@ -81,19 +99,22 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Assassin's Creed Valhalla",
 {
   id: 5,
-  title: "Marvel’s Spider-Man",
+  title: "Assassin's Creed Valhalla",
   image: game5,
-  rating: 5.0,
-  category: "Action",
-  shortDesc: "Swing through New York City in one of the best superhero games ever made.",
-  fullReview: "Marvel’s Spider-Man perfectly captures the feeling of being Spider-Man. Web-swinging is fluid and exhilarating, combat is dynamic, and the story is heartfelt and engaging.",
-  pros: ["Amazing web-swinging", "Strong story", "Fun combat"],
-  cons: ["Some repetitive side missions"],
+  rating: 4.3,
+  category: "RPG",
+  shortDesc: "A Viking saga filled with brutal combat and rich storytelling.",
+  fullReview: "Assassin's Creed Valhalla takes players to the age of Vikings, where you lead your clan from Norway to England. The game offers large open-world exploration, brutal combat mechanics, and deep RPG progression systems.",
+  pros: ["Massive open world", "Strong storytelling", "Engaging combat"],
+  cons: ["Repetitive side quests"],
   featured: true
 },
 
+
+// title: "Marvel's Avengers",
 {
   id: 6,
   title: "Marvel's Avengers",
@@ -107,6 +128,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "EA Sports FC 24",
 {
   id: 7,
   title: "EA Sports FC 24",
@@ -120,6 +142,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Battlefield 1",
 {
   id: 8,
   title: "Battlefield 1",
@@ -132,6 +155,8 @@ export const gamesData: Game[] = [
   cons: ["Limited weapon customization"],
   featured: true
 },
+
+//  title: "The Witcher 3: Wild Hunt",
 {
   id: 9,
   title: "The Witcher 3: Wild Hunt",
@@ -153,6 +178,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Elden Ring",
 {
   id: 10,
   title: "Elden Ring",
@@ -166,6 +192,7 @@ export const gamesData: Game[] = [
   featured: true
 },
 
+// title: "Elden Ring",
 {
   id: 11,
   title: "Cyberpunk 2077",
@@ -180,6 +207,7 @@ export const gamesData: Game[] = [
  
 },
 
+// title: "Elden Ring",
 {
   id: 12,
   title: "Grand Theft Auto V",
@@ -194,6 +222,7 @@ export const gamesData: Game[] = [
   
 },
 
+//  title: "Forza Horizon 5",
 {
   id: 13,
   title: "Forza Horizon 5",
@@ -208,6 +237,7 @@ export const gamesData: Game[] = [
 
 },
 
+// itle: "Minecraft",
 {
   id: 14,
   title: "Minecraft",
@@ -219,7 +249,59 @@ export const gamesData: Game[] = [
   pros: ["Unlimited creativity", "Huge mod community", "Multiplayer fun"],
   cons: ["Graphics are simple"],
    featured: true
-}
+},
 
+
+// title: "Marvel’s Spider-Man",
+{
+  id: 15,
+  title: "Marvel’s Spider-Man",
+  image: game15,
+  rating: 5.0,
+  category: "Action",
+  shortDesc: "Swing through New York City in one of the best superhero games ever made.",
+  fullReview: "Marvel’s Spider-Man perfectly captures the feeling of being Spider-Man. Web-swinging is fluid and exhilarating, combat is dynamic, and the story is heartfelt and engaging.",
+  pros: ["Amazing web-swinging", "Strong story", "Fun combat"],
+  cons: ["Some repetitive side missions"],
+  featured: true
+},
+
+{
+  id: 16,
+  title: "Destiny 2",
+  image: game16,
+  rating: 4.2,
+  category: "Shooter",
+  shortDesc: "A fast-paced sci-fi shooter with deep multiplayer content.",
+  fullReview: "Destiny 2 blends FPS action with RPG mechanics in a rich sci-fi universe. Players team up for raids, PvP battles, and seasonal story updates with stunning visuals and satisfying gunplay.",
+  pros: ["Great gunplay", "Frequent updates", "Co-op raids"],
+  cons: ["Some content locked behind DLC"],
+  featured: true
+},
+{
+  id: 17,
+  title: "Halo Infinite",
+  image: game17,
+  rating: 4.4,
+  category: "Shooter",
+  shortDesc: "Master Chief returns in an epic sci-fi adventure.",
+  fullReview: "Halo Infinite brings back Master Chief in a semi-open world experience. With improved mobility, classic Halo gunplay, and a gripping campaign, it successfully revives the legendary franchise.",
+  pros: ["Classic Halo feel", "Strong campaign", "Smooth multiplayer"],
+  cons: ["Limited launch content"],
+  featured: true
+},
+
+{
+  id: 18,
+  title: "The Last of Us Part II",
+  image: game18,
+  rating: 4.8,
+  category: "Action",
+  shortDesc: "An emotional journey of survival and revenge.",
+  fullReview: "The Last of Us Part II delivers a powerful and emotional narrative with intense survival gameplay. Its cinematic presentation, detailed environments, and character development set a new benchmark for storytelling in games.",
+  pros: ["Emotional storytelling", "Beautiful visuals", "Strong performances"],
+  cons: ["Heavy themes may not appeal to everyone"],
+  featured: true
+}
 
 ];

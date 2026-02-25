@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Game } from "@/data/gamesData";
 
-const TopRatedGames = ({ games }: { games: Game[] }) => {
+const TopRatedGames = ({ games } : { games: Game[] }) => {
+  
   const scrollRef = useRef<HTMLDivElement>(null);
   const sorted = [...games].sort((a, b) => b.rating - a.rating);
 
