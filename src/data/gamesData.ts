@@ -5,14 +5,8 @@ import game2 from "@/assets/Red_Dead_Redemption_II.jpg";
 import game3 from "@/assets/Battlefield_2042_cover_art.jpg";
 import game4 from "@/assets/Call_of_Duty_Modern_Warfare_(2019)_cover.jpg";
 import game5 from "@/assets/AssassinsCreedValhalla.jpg";
-
-
-
-
 import game6 from "@/assets/Avengers_2020_cover_art.jpg";
-
 import game7 from "@/assets/EA_FC24_Cover.png";
-
 import game8 from "@/assets/Battlefield_1_cover_art.jpg";
 import game9 from "@/assets/Witcher-3.jpg";
 import game10 from "@/assets/elden_ring_cover.jpg";
@@ -21,8 +15,6 @@ import game12 from "@/assets/gta_v_cover.jpg";
 import game13 from "@/assets/forza_horizon_4_cover.jpg";
 import game14 from "@/assets/minecraft_cover.jpg";
 import game15 from "@/assets/Spider-Man_PS4_cover.jpg";
-
-
 import game16 from "@/assets/Destiny.jpg";
 import game17 from "@/assets/Halo.jpg";
 import game18 from "@/assets/TheLastOfUsPartII.jpg"
